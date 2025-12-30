@@ -2,11 +2,11 @@ body {
   background-color: hsl(47, 88%, 63%);
   font-family: "Figtree", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .blog-card {
@@ -14,7 +14,7 @@ body {
   border-radius: 10px;
   box-shadow: 4px 4px 4px 4px hsl(0, 0%, 7%);
   max-width: 400px;
-  margin: 50px auto;
+  margin: -7px auto; /* vertically center inside column flex body */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -26,15 +26,19 @@ img.bg-img {
   border-radius: 10px;
 }
 
-.learning {
+.section1 {
   position: relative;
   width: 100%;
-  padding: 3px 15px 3px 20px; /* Top, Right, Bottom, Left */
+  padding: 3px 6px; /* top/bottom: 3px; left/right: 15px */
   background: hsl(47, 88%, 63%);
   max-width: 70px;
   border-radius: 5px;
   font-size: 15px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .published-date {
@@ -74,8 +78,10 @@ img.author-img {
 }
 
 .attribution {
-  position: absolute;
-  bottom: 25px;
+  position: sticky;
+  bottom: 4.5px;
+  margin-top: auto;
+  align-self: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 10px;
 }
